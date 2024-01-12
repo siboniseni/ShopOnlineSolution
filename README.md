@@ -9,7 +9,6 @@ This is a Shopping Cart web application developed using Blazor WebAssembly, C#, 
 - **User Authentication and Authorization:** Implement user authentication to allow users to create accounts, log in, and secure certain functionalities.
 - **Product Catalog Management:** Manage and display a catalog of products with details such as name, description, price, and images.
 - **Shopping Cart Functionality:** Enable users to add products to their cart, update quantities, and remove items.
-- **User Profile:** Allow users to view and manage their profiles, including order history.
 - **Payment Processing:** Implement a secure payment system for users to complete their purchases.
 
 ## Technologies Used
