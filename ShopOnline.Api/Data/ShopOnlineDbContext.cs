@@ -81,7 +81,6 @@ namespace ShopOnline.Api.Data
                 Price = 120,
                 Qty = 100,
                 CategoryId = 3
-
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
