@@ -1,0 +1,3 @@
+C:\Users\SA PATH\Documents\Projects\C-SharpNetProjects\ShopOnlineSolution\ShopOnline.Models\bin\Release\net7.0\publish\ShopOnline.Models.dll
+C:\Users\SA PATH\Documents\Projects\C-SharpNetProjects\ShopOnlineSolution\ShopOnline.Models\bin\Release\net7.0\publish\ShopOnline.Models.deps.json
+C:\Users\SA PATH\Documents\Projects\C-SharpNetProjects\ShopOnlineSolution\ShopOnline.Models\bin\Release\net7.0\publish\ShopOnline.Models.pdb

@@ -1,0 +1,1 @@
+C:\Users\SA PATH\Documents\Projects\C-SharpNetProjects\ShopOnlineSolution\ShopOnline.Web\obj\Release\net7.0\browser-wasm\PubTmp\Out\web.config

@@ -1,0 +1,1 @@
+C:\Users\SA PATH\Documents\Projects\C-SharpNetProjects\ShopOnlineSolution\ShopOnline.Web\bin\Release\net7.0\publish\web.config
