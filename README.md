@@ -18,7 +18,7 @@ This is a Shopping Cart web application developed using Blazor WebAssembly, C#, 
 - **.NET Core:** Cross-platform, high-performance framework for building modern, cloud-based, and internet-connected applications.
 - **Entity Framework Core:** Object-relational mapping (ORM) for interacting with the database.
 - **Bootstrap v5:** Front-end framework for responsive and visually appealing UI design.
-- **[Additional Technologies/Frameworks you use]**
+
 
 ## Getting Started
 
