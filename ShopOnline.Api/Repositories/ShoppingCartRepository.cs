@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ShopOnline.Api.Data;
 using ShopOnline.Api.Entities;
 using ShopOnline.Api.Repositories.Contracts;
@@ -6,6 +6,7 @@ using ShopOnline.Models.Dtos;
 
 namespace ShopOnline.Api.Repositories
 {
+    // Repository for managing shopping cart operations
     public class ShoppingCartRepository : IShoppingCartRepository
     {
         private readonly ShopOnlineDbContext shopOnlineDbContext;
@@ -15,16 +16,20 @@ namespace ShopOnline.Api.Repositories
             this.shopOnlineDbContext = shopOnlineDbContext;
         }
 
+        // Checks if a cart item exists based on cartId and productId
         private async Task<bool> CartItemExists(int cartId, int productId)
         {
             return await this.shopOnlineDbContext.CartItems.AnyAsync(c => c.CartId == cartId &&
                                                                      c.ProductId == productId);
-
         }
+
+        // Adds a new item to the shopping cart
         public async Task<CartItem> AddItem(CartItemToAddDto cartItemToAddDto)
         {
+
             if (await CartItemExists(cartItemToAddDto.CartId, cartItemToAddDto.ProductId) == false)
             {
+                
                 var item = await (from product in this.shopOnlineDbContext.Products
                                   where product.Id == cartItemToAddDto.ProductId
                                   select new CartItem
@@ -34,6 +39,7 @@ namespace ShopOnline.Api.Repositories
                                       Qty = cartItemToAddDto.Qty
                                   }).SingleOrDefaultAsync();
 
+                // If the item is created successfully, add it to the database
                 if (item != null)
                 {
                     var result = await this.shopOnlineDbContext.CartItems.AddAsync(item);
@@ -43,9 +49,9 @@ namespace ShopOnline.Api.Repositories
             }
 
             return null;
-
         }
 
+        // Deletes a cart item by ID
         public async Task<CartItem> DeleteItem(int id)
         {
             var item = await this.shopOnlineDbContext.CartItems.FindAsync(id);
@@ -57,9 +63,9 @@ namespace ShopOnline.Api.Repositories
             }
 
             return item;
-
         }
 
+        // Retrieves a cart item by ID
         public async Task<CartItem> GetItem(int id)
         {
             return await (from cart in this.shopOnlineDbContext.Carts
@@ -75,6 +81,7 @@ namespace ShopOnline.Api.Repositories
                           }).SingleOrDefaultAsync();
         }
 
+        // Retrieves all cart items for a given user ID
         public async Task<IEnumerable<CartItem>> GetItems(int userId)
         {
             return await (from cart in this.shopOnlineDbContext.Carts
@@ -90,6 +97,7 @@ namespace ShopOnline.Api.Repositories
                           }).ToListAsync();
         }
 
+        // Updates the quantity of a cart item
         public async Task<CartItem> UpdateQty(int id, CartItemQtyUpdateDto cartItemQtyUpdateDto)
         {
             var item = await this.shopOnlineDbContext.CartItems.FindAsync(id);
