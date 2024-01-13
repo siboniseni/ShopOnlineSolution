@@ -1,10 +1,11 @@
 # Shopping Cart Web Application
 
 ## Overview
-![myonlineshophome](https://github.com/siboniseni/ShopOnlineSolution/assets/122732898/c7d950b9-6956-4979-a190-6e2c8dd95a62) ![myonlineshopcart](https://github.com/siboniseni/ShopOnlineSolution/assets/122732898/465c1ab8-aa28-48a6-a384-bfc2348437bc)
-
 
 This is a Shopping Cart web application developed using Blazor WebAssembly, C#, and .NET. The application allows users to browse products, manage their shopping cart, and proceed with the checkout process.
+
+![myonlineshophome](https://github.com/siboniseni/ShopOnlineSolution/assets/122732898/c7d950b9-6956-4979-a190-6e2c8dd95a62) 
+![myonlineshopcart](https://github.com/siboniseni/ShopOnlineSolution/assets/122732898/465c1ab8-aa28-48a6-a384-bfc2348437bc)
 
 ## Features
 
